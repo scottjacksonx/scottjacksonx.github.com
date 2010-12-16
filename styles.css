@@ -1,0 +1,146 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, san-serif;
+	color: #333;
+	background-color: #F5F5F5;
+	text-rendering: optimizeLegibility;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+img {
+	border: none;
+}
+
+#container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#headercontainer {
+	float: left;
+	width: 280px;
+}
+
+#appstore {
+	width:250px;
+	float: right;
+	padding-left: 120px;
+	margin-top: 50px;
+}
+
+#copy {
+}
+
+h1 {
+	font-family: Futura, "Helvetica Neue", Helvetica, Arial, san-serif;
+	font-size: 32pt;
+	text-shadow: #999 1px 1px 1px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-family: "Helvetica Neue", Helvetica, Arial, san-serif;
+	font-size: 18pt;
+	text-shadow: #999 0px 0px 2px;
+}
+
+ul {
+	padding-left: 0px;
+}
+
+li {
+	list-style-type: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, san-serif;
+}
+
+#steps {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+.step {
+	padding-top: 50px;
+	float: left;
+	height: 250px;
+	width: 280px;
+	background-color: #D5D5D5;
+	margin-left: 10px;
+	margin-right: 10px;
+	opacity: 0.2;
+	-webkit-transition: opacity 0.8s linear;
+	-moz-transition: opacity 0.8s linear;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+#activeStep {
+	opacity: 1;
+}
+
+.screenshot {
+	width: 250px;
+	height: 150px;
+}
+
+.step p {
+	margin: 0 auto;
+	text-align: left;
+	padding: 10px;
+	
+}
+
+
+span.code {
+	font-family: Monaco, "Courier New", Courier, monospace;
+}
+
+
+#workflowscontainer {
+	display: none;
+	background-color: #DDD;
+	padding: 10px;
+	width: 600px;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+#workflows li {
+	list-style-position: outside;
+	margin-left: 90px;
+	width: 500px;
+	margin-bottom: 40px;	
+}
+
+#workflows li p {
+	font-weight: bold;
+	float:right;
+	margin:0;
+	padding:0 0 0 20px;
+}
+
+#iTunes_workflow {
+	list-style-image: url("iTunes.png");
+}
+
+#uTorrent_workflow {
+	list-style-image: url("uTorrent.png");
+}
+
+#dropbox_workflow {
+	list-style-image: url("dropbox.png");
+}
+
+
+#hazel_workflow {
+	list-style-image: url("hazel.png");
+}
+
+#prowl_workflow {
+	list-style-image: url("growl.png");
+}
+
