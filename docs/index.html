@@ -6,6 +6,14 @@
 	<link rel=stylesheet href="styles.css" type="text/css" media=screen>
 </head>
 <body>
-	<p>SUPER-SECRET UNDOCUMENTED TIP: any line in your download note that starts with &ldquo;#&rdquo; is considered a comment and will be left alone when NoteTote checks for new downloads. As a result, you can use Merlin&rsquo;s neat <a href="http://www.kungfugrippe.com/post/453204090/q-trick">&ldquo;q&rdquo; trick</a> for easy access to your download note. Booya, or whatever.</p>
+	<div id="container">
+		<h1>NoteTote Documentation</h1>
+		<h2>The Rules</h2>
+		<p>Every <em>x</em> minutes (ten by default), NoteTote will search your Simplenote account for a note starting with the phrase &ldquo;NoteTote_Downloads&rdquo; &mdash; this is your download note.</p>
+		<p>NoteTote goes through the download note, treats every line as a URL, and tries to download the file that's located at the URL.</p>
+		<p><em>Please</em> try to make sure that only one note starts with &ldquo;NoteTote_Downloads&rdquo; &mdash; if multiple notes start with it, the most-recently-modified note will be used.</p>
+		<p>If the note doesn't start with &ldquo;NoteTote_Downloads&rdquo;, nothing will happen to the note (this is to prevent an unrelated note that contains &ldquo;NoteTote_Downloads&rdquo; from being wiped).</p>
+		<p><b>Super-secret tip:</b> any line in your download note that starts with &ldquo;#&rdquo; is considered a comment and will be left alone when NoteTote checks for new downloads. As a result, you can use <a href="http://www.kungfugrippe.com/post/453204090/q-trick">Merlin&rsquo;s neat &ldquo;q&rdquo; trick</a> for easy access to your download note. Booya, or whatever.</p>
+	</div>
 </body>
 </html>
