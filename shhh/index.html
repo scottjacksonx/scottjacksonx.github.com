@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv=Content-type content="text/html; charset=utf-8">
+	<link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+	<title>NoteTote for Mac OS X</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		function moveStep() {
+			$("#activeStep").attr("id", "temp");
+			if ($("#temp").hasClass("step3")) {
+				if (navigator.userAgent.search("Firefox") != -1) {
+					$("#temp").animate({opacity: 0.3}, 800, function(){});
+					$("#temp").parent().children().first().animate({opacity: 1}, 800, function(){});
+				}
+				$("#temp").parent().children().first().attr("id", "activeStep");
+			} else {
+				if (navigator.userAgent.search("Firefox") != -1) {
+					$("#temp").animate({opacity: 0.3}, 800, function(){});
+					$("#temp").next().animate({opacity: 1}, 800, function(){});
+				}
+				$("#temp").next().attr("id", "activeStep");
+			}
+			$("#temp").attr("id", "");
+		}
+		
+		function powerUser() {
+			$('#workflowscontainer').toggle(800);
+		}
+	</script>
+	<link rel=stylesheet href="styles.css" type="text/css" media=screen>
+</head>
+<body onload="setInterval('moveStep()', 3500)">
+	<div id="container">
+		<a href="javascript:alert('This link will go to the App Store. The picture should be for the Mac App Store, though. I hope Apple makes those resources available soon.')">
+			<img src="appstore.png" alt="NoteTote on the Mac App Store" id="appstore" />
+		</a>
+		<a href="javascript:alert('This link will go to the App Store.')">
+			<img src="icon.png" alt="NoteTote for Mac OS X" style="float:right;height: 180px;"/>
+		</a>
+		
+		
+		<div id="headercontainer">
+			<h1>NoteTote</h1>
+			<h2>Download stuff to your Mac from anywhere.</h2>
+			<h2 style="margin-bottom: 0px;">Only $8.99.</h2>
+			
+		</div>
+		
+		<div style="clear:both;"></div>
+		<div id="copy">
+			<h2>Here&rsquo;s the deal.</h2>
+			
+			<p>Doing things on your computer remotely can be a chore. You shouldn&rsquo;t have to deal with computer-nerd stuff like IP addresses and SSH just to get that neat video onto your computer when your friend tells you about it at the bar. <b>Enter NoteTote.</b></p>
+			
+			
+			<ul id="steps">
+				<li class="step" id="activeStep">
+					<img src="screenshot_1.png" alt="Run NoteTote in your Mac&rsquo;s menubar." class="screenshot" />
+					<p>1. <b>Run NoteTote in your Mac&rsquo;s menubar.</b></p>
+				</li>
+				<li class="step">
+					<img src="screenshot_2.png" alt="Add the URL of a file to a new line in a specific note in your Simplenote." style="width: 250px;" class="screenshot"/>
+					<p>2. <b>Add the URL of a file to a new line in a specific note in your Simplenote.</b></p>
+				</li>
+				<li class="step step3">
+					<img src="screenshot_3.png" alt="NoteTote downloads that file to your Mac."  class="screenshot"/>
+					<p>3. <b>NoteTote downloads that file to your Mac.</b></p>
+				</li>
+			</ul>
+			<div style="clear:both;"></div>
+			
+			
+			<h2>NoteTote.</h2>
+			
+			<p>NoteTote lets you remotely tell your Mac at home to download files. That&rsquo;s it. Just leave NoteTote running in the menubar on your home Macintosh and when you&rsquo;re out and about, use <a href="http://simplenoteapp.com">Simplenote</a> on your iPhone, iPod Touch, iPad, any Mac or PC Simplenote client, or <a href="http://simple-note.appspot.com/">any internet-enabled computer</a> to give your computer files to download. Your Mac at home downloads the file, and it&rsquo;s ready for you when you get home. <b>Simple, secure, no technical wizardry required.</b></p>
+			
+			<p>NoteTote lets you download any kind of file &mdash; <span class="code">.mp4</span>, <span class="code">.mov</span>, <span class="code">.mp3</span>, <span class="code">.zip</span>, <span class="code">.dmg</span>, <span class="code">.app</span>, <span class="code">.pdf</span>, you name it &mdash; <b>if it&rsquo;s a public file on the web, NoteTote can download it</b>. All while you&rsquo;re away from your computer. NoteTote even lets you download YouTube videos &mdash; just give NoteTote the URL of the YouTube video and the .mp4 version of the video will be downloaded to your Mac (in HD when available).</p>
+
+
+			<h2>Fancy yourself a power user?</h2>
+			<p>NoteTote can be a great addition to your workflow. The possibilities are endless &mdash; <a href="javascript:powerUser()">click here</a> to see a few ideas to get you started.</p>
+			<div id="workflowscontainer">
+				<ul id="workflows">
+					<li id="iTunes_workflow"><p>Set NoteTote to download files to the &ldquo;Automatically Add To iTunes&rdquo; directory on your Mac so all the files you download are added to your iTunes library.</p></li>
+
+					<li id="dropbox_workflow"><p>Have NoteTote download files to your <a href="http://dropbox.com">Dropbox</a> folder &mdash; that way, you can upload any kind of file to your Dropbox while you&rsquo;re on the go (something Dropbox's official iPhone and iPad apps don't support).</p></li>
+					
+					<li id="uTorrent_workflow"><p>Tell NoteTote to download files to the directory that <a href="http://www.utorrent.com/">&micro;Torrent</a> is watching for new torrent files so all of your Wikipedia database dumps, Linux ISOs, and 100% legal, Creative Commons-licensed &ldquo;videos of your cat&rdquo; can start downloading as soon as you find out about them.</p></li>
+					
+					<li id="hazel_workflow"><p>Use <a href="http://www.noodlesoft.com/hazel.php">Hazel</a> to neatly sort the files NoteTote downloads and push them around your home network to where they need to be.</p></li>
+					
+					<li id="prowl_workflow"><p>Get <a href="http://prowl.weks.net/">Prowl</a> to send you a push notification when a file has finished downloading.</p></li>
+				</ul>
+
+				<p>Use it right, and NoteTote can become a link in a <em>very</em> powerful chain.</p>
+			</div>
+			
+		</div>
+
+
+			<h2>Simple, no?</h2>
+			<p>A lot of power wrapped up in a small package &mdash; NoteTote is a steal at just $8.99. <a href="javascript:alert('This link will go to the App Store.')">Buy it today from the Mac App Store</a>.</p>
+	</div>
+</body>
+</html>
