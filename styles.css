@@ -18,14 +18,48 @@ img {
 
 #headercontainer {
 	float: left;
-	width: 280px;
+	width: 300px;
+}
+
+#downloadContainer {
+	float: right;
+}
+
+h3.downloadPrompt {
+	width: 145px;
+	float: right;
+	font-family: "Helvetica Neue", Helvetica, Arial, san-serif;
+	font-size: 14pt;
+	text-shadow: #999 0px 0px 2px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 15px;
+}
+
+div.download {
+	text-align: left;
+	background-color: #E0E0E0;
+	width: 240px;
+	height: 77px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-transition: background-color 0.5s linear;
+	-moz-transition: background-color 0.5s linear;
+	padding: 5px;
+}
+
+div.download:hover {
+	background-color: #D0D0D0;
+}
+
+a.download {
+	text-decoration: none;
+	color: #000;
 }
 
 #appstore {
-	width:250px;
 	float: right;
-	margin-left: 110px;
-	margin-top: 50px;
 }
 
 #copy {

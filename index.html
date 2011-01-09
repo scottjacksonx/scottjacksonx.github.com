@@ -45,13 +45,23 @@
 </head>
 <body onload="setInterval('moveStep()', 3500)">
 	<div id="container">
-		<a href="javascript:alert('This link will go to the App Store. Need Apple to release the Mac App Store image.')">
-			<img src="http://placehold.it/250x83&text=Mac+App+Store+Image" alt="NoteTote on the Mac App Store" id="appstore" />
-		</a>
-		<a href="javascript:alert('This link will go to the App Store.')">
-			<img src="icon.png" alt="NoteTote for Mac OS X" style="float:right;width: 180px;"/>
-		</a>
 		
+		<div id="downloadContainer">
+			<a href="appstore/" class="download">
+				<div class="download">
+					<img src="appStoreIcon.png" alt="NoteTote on the Mac App Store" id="" style="float: left;"/>
+					<h3 class="downloadPrompt">Buy it on the Mac App Store</h3>
+				</div>
+			</a>
+			<div style="clear: both;height: 5px;"></div>
+
+			<a href="NoteTote.zip" class="download">
+				<div class="download">
+					<img src="downloadsIcon.png" alt="NoteTote on the Mac App Store" id="" style="float: left;padding-left:5px;"/>
+					<h3 class="downloadPrompt">Download a free trial</h3>
+				</div>
+			</a>
+		</div>		
 		
 		<div id="headercontainer">
 			<h1>NoteTote</h1>
@@ -59,6 +69,9 @@
 			<h2 style="margin-bottom: 0px;">Only $8.99.</h2>
 			
 		</div>
+		
+		
+		<img src="icon.png" alt="NoteTote for Mac OS X" style="float:left;width: 180px;margin-left: 70px;"/>
 		
 		<div style="clear:both;"></div>
 		<div id="copy">
@@ -110,7 +123,7 @@
 			
 		</div>
 			<h2>Simple, no?</h2>
-			<p>A lot of power wrapped up in a small package &mdash; NoteTote is a steal at just $8.99. <a href="javascript:alert('This link will go to the App Store.')">Buy it today from the Mac App Store</a>.</p>
+			<p>A lot of power wrapped up in a small package. <a href="NoteTote.zip">Download a free trial version</a> or <a href="javascript:alert('This link will go to the App Store.')">buy it for $8.99 from the Mac App Store</a>.</p>
 	</div>
 </body>
 </html>
