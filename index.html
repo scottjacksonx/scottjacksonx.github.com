@@ -6,6 +6,18 @@
 	<title>NoteTote for Mac OS X</title>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 	<script type="text/javascript" charset="utf-8">
+	
+		function move() {
+			window.location.hash = "powerusers";
+		}
+	
+		$(document).ready(function() {
+			if (window.location.hash == "#workflows") {
+				powerUser();
+				setTimeout("move()", 1000);
+			}
+		});
+	
 		function moveStep() {
 			$("#activeStep").attr("id", "temp");
 			if ($("#temp").hasClass("step3")) {
@@ -102,7 +114,7 @@
 			
 			<p>NoteTote lets you download any kind of file &mdash; <span class="code">.mp4</span>, <span class="code">.mov</span>, <span class="code">.mp3</span>, <span class="code">.zip</span>, <span class="code">.dmg</span>, <span class="code">.app</span>, <span class="code">.pdf</span>, you name it &mdash; <b>if it&rsquo;s a public file on the web, NoteTote can download it</b>. All while you&rsquo;re away from your computer.</p>
 
-
+			<a name="powerusers"></a>
 			<h2>Fancy yourself a power user?</h2>
 			<p>NoteTote can be a great addition to your workflow. The possibilities are endless &mdash; <a href="javascript:powerUser()">click here</a> to see a few ideas to get you started.</p>
 			<div id="workflowscontainer">
