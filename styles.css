@@ -157,6 +157,10 @@ span.code {
 	padding:0 0 0 20px;
 }
 
+#youtube_workflow {
+	list-style-image: url("youtube.png");
+}
+
 #iTunes_workflow {
 	list-style-image: url("iTunes.png");
 }
