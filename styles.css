@@ -7,6 +7,16 @@ body {
 	padding: 20px;
 }
 
+a {
+	color: #333;
+	-webkit-transition: color 0.5s linear;
+	-moz-transition: color 0.5s linear;
+}
+
+a:hover {
+	text-shadow: #999 0px 0px 1px;
+}
+
 #container {
 	width: 900px;
 	margin: 0 auto;
@@ -22,6 +32,7 @@ img {
 }
 
 #downloadContainer {
+	padding-top: 50px;
 	float: right;
 }
 
