@@ -17,6 +17,11 @@ a:hover {
 	text-shadow: #999 0px 0px 1px;
 }
 
+s {
+	color: #DDD;
+	text-shadow: none;
+}
+
 #container {
 	width: 900px;
 	margin: 0 auto;
@@ -145,7 +150,6 @@ span.code {
 
 
 #workflowscontainer {
-	display: none;
 	background-color: #DDD;
 	padding: 10px;
 	width: 600px;
