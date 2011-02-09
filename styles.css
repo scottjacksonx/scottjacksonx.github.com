@@ -22,63 +22,43 @@ s {
 	text-shadow: none;
 }
 
+/*
+ Container for the whole page.
+*/
 #container {
 	width: 900px;
 	margin: 0 auto;
 }
 
+/*
+ Otherwise, linked images would have borders in Firefox.
+*/
 img {
 	border: none;
 }
 
+/*
+ Wrapper around the header text.
+*/
 #headercontainer {
 	float: left;
 	width: 300px;
 }
 
+/*
+ Wrapper around the download links.
+*/
 #downloadContainer {
 	padding-top: 50px;
 	float: right;
 }
 
-h3.downloadPrompt {
-	width: 145px;
-	float: right;
-	font-family: "Helvetica Neue", Helvetica, Arial, san-serif;
-	font-size: 14pt;
-	text-shadow: #999 0px 0px 2px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	padding-top: 15px;
-}
-
-div.download {
-	text-align: left;
-	background-color: #E0E0E0;
-	width: 240px;
-	height: 77px;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-transition: background-color 0.5s linear;
-	-moz-transition: background-color 0.5s linear;
-	padding: 5px;
-}
-
-div.download:hover {
-	background-color: #D0D0D0;
-}
-
+/*
+ Stops downloads from being bold and blue.
+*/
 a.download {
 	text-decoration: none;
 	color: #000;
-}
-
-#appstore {
-	float: right;
-}
-
-#copy {
 }
 
 h1 {
@@ -111,6 +91,9 @@ li {
 	margin-bottom: 30px;
 }
 
+/*
+ A single step in the tutorial.
+*/
 .step {
 	padding-top: 20px;
 	float: left;
@@ -131,11 +114,17 @@ li {
 	opacity: 1;
 }
 
+/*
+ Forces screenshots to the same size.
+*/
 .screenshot {
 	width: 250px;
 	height: 150px;
 }
 
+/*
+ Copy for tutorial steps.
+*/
 .step p {
 	margin: 0 auto;
 	text-align: left;
@@ -143,12 +132,68 @@ li {
 	
 }
 
-
 span.code {
 	font-family: Monaco, "Courier New", Courier, monospace;
 }
 
+.press {
+	float: left;
+	margin-left: 70px;
+}
 
+/*
+ class for <p> elements in the press.
+*/
+.triangle-isosceles {
+	font-family: "Georgia", serif;
+	font-size: 18pt;
+	position:relative;
+	padding:15px;
+	margin-bottom: 5px;
+	color:#000;
+	background:#DDD; /* default background for browsers without gradient support */
+	
+	/* css3 */
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	/* NOTE: webkit gradient implementation is not as per spec */
+	background:-webkit-gradient(linear, left top, left bottom, from(#DDDDDD), to(#D0D0D0));
+	background:-moz-linear-gradient(top, #DDDDDD, #D0D0D0);
+	background:-o-linear-gradient(top, #DDDDDD, #D0D0D0);
+	width: 300px;
+	height: 125px;
+}
+
+/*
+ The actual triangle in the speech bubble.
+*/
+.triangle-isosceles:after {
+	content:"";
+	display:block; /* reduce the damage in FF3.0 */
+	position:absolute;
+	bottom:-15px; /* value = - border-top-width - border-bottom-width */
+	left:230px; /* controls horizontal position */
+	width:0;
+	height:0;
+	border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+	border-style:solid;
+	border-color:#D0D0D0 transparent;
+}
+
+.pressQuote {
+	font-family: "Georgia", serif;
+}
+
+.pressSource {
+	float: right;
+	bottom: 0;
+	padding-right: 30px;
+}
+
+/*
+ This is all for workflows/index.html
+*/
 #workflowscontainer {
 	background-color: #DDD;
 	padding: 10px;
@@ -195,4 +240,3 @@ span.code {
 #prowl_workflow {
 	list-style-image: url("growl.png");
 }
-
